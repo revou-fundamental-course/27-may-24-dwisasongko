@@ -3,9 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tugas Desain</title>
+    <title>Tugas Minisite</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <nav>
+        <div class="logo"></div>
+        <section>
+            <a class="menu-item" href="#home">Beranda</a>
+            <a class="menu-item" href="#menu">Aneka Menu</a>
+            <a class="menu-item" href="#kontak">Kontak Kami</a>
+        </section>
+    </nav>
+    <hr>
+    <!-- home -->
+    <section id="home">
+        <header>
+            <h1>Selamat Datang</h1>
+        </header>
+        <article>
+            <p>di warung kopi online</p>
+            <div class="banner"><img src="./assets/banner.jpg"></div>
+        </article>
+    </section>
+    <hr>
+    <!-- facilities -->
+    <section id="menu">
+        <header>
+            <h1>Aneka Menu</h1>
+        </header>
+        <article class="facilities-list">
+            <div>
+                <img src="./assets/kopi.png">
+                <h4>Kopi</h4>
+            </div>
+            <div>
+                <img src="./assets/donat.png">
+                <h4>Donat</h4>
+            </div>            
+            <div>
+                <img src="./assets/susu.png">
+                <h4>Susu</h4>
+            </div>
+        </article>
+    </section>
+    <hr>
+    <!-- kontak -->
+    <section id="kontak">
+        <header>
+            <h1>Kontak Kami</h1>
+        </header>
+        <article class="kontak">
+            <div>
+                <form action="#">
+                <div class="row">
+                  <div class="col-25">
+                    <label for="nama">Nama</label>
+                  </div>
+                  <div class="col-75">
+                    <input type="text" id="nama" name="nama" placeholder="Nama Anda..">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-25">
+                    <label for="tgl">Tanggal Lahir</label>
+                  </div>
+                  <div class="col-75">
+                    <input type="date" id="tgl" name="tgl">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-25">
+                    <label for="jkel">Jenis Kelamin</label>
+                  </div>
+                  <div class="col-75">
+                    <input type="radio" id="jkel" name="jkel"><label>Laki-laki</label>
+                    <input type="radio" id="jkel" name="jkel"><label>Perempuan</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-25">
+                    <label for="subject">Pesan</label>
+                  </div>
+                  <div class="col-75">
+                    <textarea id="pesan" name="pesan" placeholder="Pesan Anda.." style="height:200px"></textarea>
+                  </div>
+                </div>
+                <br>
+                <div class="row">
+                  <input type="submit" value="kirim">
+                </div>
+                </form>
+            </div>
+            <div class="form-result">
+                <div class="form-output"></div>
+            </div>
+        </article>
+
+    </section>
+    <hr>
+    <!-- footer -->
+    <footer>
+        <p>Dibuat oleh Uhuy - 2024</p>
+    </footer>
     
 </body>
 </html>
