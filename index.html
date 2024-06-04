@@ -19,11 +19,10 @@
     <!-- home -->
     <section id="home">
         <header>
-            <h1>Selamat Datang</h1>
+            <h1>Selamat Datang <span id="nama-header"></span></h1>
         </header>
         <article>
-            <p>di warung kopi online <span id="nama">Anda</span></p>
-            <button id="tombol"></button>
+            <p>di warung kopi online <button id="tombol">klik!</button></p>
             <div class="banner"><img src="./assets/banner.jpg"></div>
         </article>
     </section>
@@ -56,13 +55,13 @@
         </header>
         <article class="kontak">
             <div>
-                <form action="#">
+                <form name="myForm" method="post" onsubmit="return false">
                 <div class="row">
                   <div class="col-25">
                     <label for="nama">Nama</label>
                   </div>
                   <div class="col-75">
-                    <input type="text" id="nama" name="nama" placeholder="Nama Anda..">
+                    <input type="text" id="nama" name="fnama" required placeholder="Nama Anda..">
                   </div>
                 </div>
                 <div class="row">
@@ -70,34 +69,42 @@
                     <label for="tgl">Tanggal Lahir</label>
                   </div>
                   <div class="col-75">
-                    <input type="date" id="tgl" name="tgl">
+                    <input type="date" id="tgl" name="ftgl" required>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-25">
-                    <label for="jkel">Jenis Kelamin</label>
+                    <label>Jenis Kelamin</label>
                   </div>
                   <div class="col-75">
-                    <input type="radio" id="jkel" name="jkel"><label>Laki-laki</label>
-                    <input type="radio" id="jkel" name="jkel"><label>Perempuan</label>
+                    <input type="radio" id="laki" name="fjkel" value="Laki-laki" required><label for="laki">Laki-laki</label>
+                    <input type="radio" id="perempuan" name="fjkel" value="Perempuan" required><label for="perempuan">Perempuan</label>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-25">
-                    <label for="subject">Pesan</label>
+                    <label for="pesan">Pesan</label>
                   </div>
                   <div class="col-75">
-                    <textarea id="pesan" name="pesan" placeholder="Pesan Anda.." style="height:200px"></textarea>
+                    <textarea id="pesan" name="fpesan" required placeholder="Pesan Anda.." style="height:200px"></textarea>
                   </div>
                 </div>
                 <br>
                 <div class="row">
-                  <input type="submit" value="kirim">
+                  <input type="submit" value="kirim" onclick="kirimForm()">
                 </div>
                 </form>
             </div>
             <div class="form-result">
-                <div class="form-output"></div>
+                <div class="form-output">
+                  <p>
+                    <span id="hasil-tglsaiki"></span><br><br>
+                    <span id="hasil-nama"></span><br>
+                    <span id="hasil-tgl"></span><br>
+                    <span id="hasil-jkel"></span><br>
+                    <span id="hasil-pesan"></span>
+                  </p>
+                </div>
             </div>
         </article>
 
